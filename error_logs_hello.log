@@ -1,0 +1,11 @@
+[2016-03-03 09:43:48 +0400] [5661] [INFO] Starting gunicorn 19.4.5
+[2016-03-03 09:43:48 +0400] [5661] [INFO] Listening at: http://0.0.0.0:8080 (5661)
+[2016-03-03 09:43:48 +0400] [5661] [INFO] Using worker: sync
+[2016-03-03 09:43:48 +0400] [5665] [INFO] Booting worker with pid: 5665
+[2016-03-03 09:44:22 +0400] [5661] [INFO] Handling signal: term
+[2016-03-03 09:44:22 +0400] [5665] [INFO] Worker exiting (pid: 5665)
+[2016-03-03 09:44:22 +0400] [5661] [INFO] Shutting down: Master
+[2016-03-03 09:47:06 +0400] [1397] [INFO] Starting gunicorn 19.4.5
+[2016-03-03 09:47:06 +0400] [1397] [INFO] Listening at: http://0.0.0.0:8080 (1397)
+[2016-03-03 09:47:06 +0400] [1397] [INFO] Using worker: sync
+[2016-03-03 09:47:06 +0400] [1401] [INFO] Booting worker with pid: 1401

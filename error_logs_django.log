@@ -1,0 +1,16 @@
+[2016-03-03 09:43:48 +0400] [5667] [INFO] Starting gunicorn 19.4.5
+[2016-03-03 09:43:48 +0400] [5667] [ERROR] Connection in use: ('0.0.0.0', 8000)
+[2016-03-03 09:43:48 +0400] [5667] [ERROR] Retrying in 1 second.
+[2016-03-03 09:43:49 +0400] [5667] [ERROR] Connection in use: ('0.0.0.0', 8000)
+[2016-03-03 09:43:49 +0400] [5667] [ERROR] Retrying in 1 second.
+[2016-03-03 09:43:50 +0400] [5667] [ERROR] Connection in use: ('0.0.0.0', 8000)
+[2016-03-03 09:43:50 +0400] [5667] [ERROR] Retrying in 1 second.
+[2016-03-03 09:43:51 +0400] [5667] [ERROR] Connection in use: ('0.0.0.0', 8000)
+[2016-03-03 09:43:51 +0400] [5667] [ERROR] Retrying in 1 second.
+[2016-03-03 09:43:52 +0400] [5667] [ERROR] Connection in use: ('0.0.0.0', 8000)
+[2016-03-03 09:43:52 +0400] [5667] [ERROR] Retrying in 1 second.
+[2016-03-03 09:43:53 +0400] [5667] [ERROR] Can't connect to ('0.0.0.0', 8000)
+[2016-03-03 09:47:06 +0400] [1404] [INFO] Starting gunicorn 19.4.5
+[2016-03-03 09:47:06 +0400] [1404] [INFO] Listening at: http://0.0.0.0:8000 (1404)
+[2016-03-03 09:47:06 +0400] [1404] [INFO] Using worker: sync
+[2016-03-03 09:47:06 +0400] [1408] [INFO] Booting worker with pid: 1408
