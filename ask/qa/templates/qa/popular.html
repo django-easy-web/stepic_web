@@ -1,0 +1,17 @@
+<ul>
+    {% for p in paginator.page_range %}
+        <li><a href="{{ paginator.baseurl }}{{ p }}">{{ p }}</a></li>
+    {% endfor %}
+</ul>
+
+{% if quest_list %}
+    <h2>List Quest:</h2>
+    <ul>
+    {% for quest in quest_list %}
+        <li>{{ quest.title }} - {{ quest.rating }}</li>
+        <p><a href="/question/{{ quest.id }}">К вопросу</a></p>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Quest!</p>
+{% endif %}

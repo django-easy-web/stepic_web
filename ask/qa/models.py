@@ -10,6 +10,9 @@ class Question(models.Model):
     author = models.ForeignKey(User, related_name='user_author')
     likes = models.ManyToManyField(User, related_name='user_likes')
 
+    def __unicode__(self):
+        return self.title
+
 
 class Answer(models.Model):
     text = models.TextField()
@@ -17,4 +20,5 @@ class Answer(models.Model):
     question = models.ForeignKey(Question)
     author = models.ForeignKey(User)
 
-
+    def __unicode__(self):
+        return self.text

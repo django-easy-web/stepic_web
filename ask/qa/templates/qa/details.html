@@ -1,0 +1,12 @@
+<h2>{{ quest.title }}</h2>
+
+<p>
+    {{ quest.text }}
+</p>
+
+<ul>
+    {% for answer in quest.answer_set.all %}
+        <li>{{ answer.text }}</li>
+    {% endfor %}
+
+</ul>
