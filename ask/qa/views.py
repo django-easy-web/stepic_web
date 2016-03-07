@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, Http404, HttpResponseRedirect
+from django.views.decorators.csrf import csrf_exempt
 
 from .models import Question, Answer
 from .forms import AskForm, AnswerForm
@@ -54,6 +55,7 @@ def one_quest(request, id):
     })
 
 
+@csrf_exempt
 def ask_add(request):
     if request.method == 'POST':
         form = AskForm(request.POST)
@@ -68,6 +70,7 @@ def ask_add(request):
     })
 
 
+@csrf_exempt
 def answer_add(request):
     if request.method == 'POST':
         form = AnswerForm(request.POST)
