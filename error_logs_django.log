@@ -141,3 +141,10 @@
 [2016-03-07 16:08:43 +0400] [3987] [INFO] Listening at: http://0.0.0.0:8000 (3987)
 [2016-03-07 16:08:43 +0400] [3987] [INFO] Using worker: sync
 [2016-03-07 16:08:43 +0400] [3990] [INFO] Booting worker with pid: 3990
+[2016-03-07 16:15:57 +0400] [3987] [INFO] Handling signal: term
+[2016-03-07 12:15:57 +0000] [3990] [INFO] Worker exiting (pid: 3990)
+[2016-03-07 16:15:57 +0400] [3987] [INFO] Shutting down: Master
+[2016-03-07 16:15:58 +0400] [4389] [INFO] Starting gunicorn 19.4.5
+[2016-03-07 16:15:58 +0400] [4389] [INFO] Listening at: http://0.0.0.0:8000 (4389)
+[2016-03-07 16:15:58 +0400] [4389] [INFO] Using worker: sync
+[2016-03-07 16:15:58 +0400] [4392] [INFO] Booting worker with pid: 4392

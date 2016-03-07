@@ -61,8 +61,11 @@ def ask_add(request):
         form = AskForm(request.POST)
         if form.is_valid():
             ask = form.save()
-            url = '/question/{0}'.format(ask.id)
-            return HttpResponseRedirect(url)
+            #url = '/question/{0}'.format(ask.id)
+            #return HttpResponseRedirect(url)
+            resp = HttpResponse(content='', status=302)
+            resp['Location'] = '/question/{0}'.format(ask.id)
+            return resp
     else:
         form = AskForm()
     return render(request, 'qa/add_ask.html', {
