@@ -138,3 +138,24 @@
 [2016-03-07 16:15:57 +0400] [4383] [INFO] Listening at: http://0.0.0.0:8080 (4383)
 [2016-03-07 16:15:57 +0400] [4383] [INFO] Using worker: sync
 [2016-03-07 16:15:57 +0400] [4387] [INFO] Booting worker with pid: 4387
+[2016-03-07 18:04:05 +0400] [4383] [INFO] Handling signal: term
+[2016-03-07 18:04:05 +0400] [4387] [INFO] Worker exiting (pid: 4387)
+[2016-03-07 18:04:05 +0400] [4383] [INFO] Shutting down: Master
+[2016-03-08 13:16:40 +0400] [1349] [INFO] Starting gunicorn 19.4.5
+[2016-03-08 13:16:40 +0400] [1349] [INFO] Listening at: http://0.0.0.0:8080 (1349)
+[2016-03-08 13:16:40 +0400] [1349] [INFO] Using worker: sync
+[2016-03-08 13:16:40 +0400] [1353] [INFO] Booting worker with pid: 1353
+[2016-03-08 13:23:13 +0400] [1349] [INFO] Handling signal: term
+[2016-03-08 13:23:13 +0400] [1353] [INFO] Worker exiting (pid: 1353)
+[2016-03-08 13:23:13 +0400] [1349] [INFO] Shutting down: Master
+[2016-03-08 17:11:25 +0400] [1390] [INFO] Starting gunicorn 19.4.5
+[2016-03-08 17:11:25 +0400] [1390] [INFO] Listening at: http://0.0.0.0:8080 (1390)
+[2016-03-08 17:11:25 +0400] [1390] [INFO] Using worker: sync
+[2016-03-08 17:11:25 +0400] [1395] [INFO] Booting worker with pid: 1395
+[2016-03-08 18:22:09 +0400] [1390] [INFO] Handling signal: term
+[2016-03-08 18:22:09 +0400] [1395] [INFO] Worker exiting (pid: 1395)
+[2016-03-08 18:22:09 +0400] [1390] [INFO] Shutting down: Master
+[2016-03-09 07:59:53 +0400] [1383] [INFO] Starting gunicorn 19.4.5
+[2016-03-09 07:59:53 +0400] [1383] [INFO] Listening at: http://0.0.0.0:8080 (1383)
+[2016-03-09 07:59:53 +0400] [1383] [INFO] Using worker: sync
+[2016-03-09 07:59:53 +0400] [1395] [INFO] Booting worker with pid: 1395

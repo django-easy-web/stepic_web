@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from django.http import HttpResponse, Http404, HttpResponseRedirect
-from django.views.decorators.csrf import csrf_exempt
 
 from .models import Question, Answer
 from .forms import AskForm, AnswerForm
@@ -55,17 +54,13 @@ def one_quest(request, id):
     })
 
 
-@csrf_exempt
 def ask_add(request):
     if request.method == 'POST':
         form = AskForm(request.POST)
         if form.is_valid():
             ask = form.save()
-            #url = '/question/{0}'.format(ask.id)
-            #return HttpResponseRedirect(url)
-            resp = HttpResponse(content='', status=302)
-            resp['Location'] = '/question/{0}'.format(ask.id)
-            return resp
+            url = '/question/{0}'.format(ask.id)
+            return HttpResponseRedirect(url)
     else:
         form = AskForm()
     return render(request, 'qa/add_ask.html', {
@@ -73,7 +68,6 @@ def ask_add(request):
     })
 
 
-@csrf_exempt
 def answer_add(request):
     if request.method == 'POST':
         form = AnswerForm(request.POST)

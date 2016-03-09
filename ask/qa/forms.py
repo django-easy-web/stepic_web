@@ -11,7 +11,7 @@ class AskForm(forms.Form):
         cleaned_data = super(AskForm, self).clean()
 
     def save(self):
-        self.cleaned_data['author'] = User.objects.get(pk=random.randint(1, 2))
+        self.cleaned_data['author'] = User.objects.create(username='Author{0}'.format(random.randint(1, 1000)))
         return Question.objects.create(**self.cleaned_data)
 
 
@@ -23,5 +23,5 @@ class AnswerForm(forms.Form):
         cleaned_data = super(AnswerForm, self).clean()
 
     def save(self):
-        self.cleaned_data['author'] = User.objects.get(pk=random.randint(1, 2))
+        self.cleaned_data['author'] = User.objects.create(username='Author{0}'.format(random.randint(1, 1000)))
         return Answer.objects.create(**self.cleaned_data)
