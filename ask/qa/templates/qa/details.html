@@ -9,7 +9,10 @@
 
 <ul>
     {% for answer in quest.answer_set.all %}
-        <li>{{ answer.text }}</li>
+        <li>
+            <p>{{ answer.author.username }}</p>
+            <p>{{ answer.text }}</p>
+        </li>
     {% endfor %}
 
 </ul>
