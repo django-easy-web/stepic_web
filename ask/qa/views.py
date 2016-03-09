@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, Http404, HttpResponseRedirect
+from django.contrib.auth import login, authenticate, logout
+from django.contrib.auth.models import User
 
 from .models import Question, Answer
 from .forms import AskForm, AnswerForm
@@ -11,6 +13,41 @@ def test(request, *args, **kwargs):
     return HttpResponse("OK")
 
 
+def signup(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        user = User.objects.create_user(username, email, password)
+
+        user_auth = authenticate(username=username, password=password)
+        login(request, user_auth)
+        return HttpResponseRedirect('/')
+    else:
+        return render(request, 'qa/signup.html')
+
+
+def login_user(request):
+    error = ''
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            login(request, user)
+            return HttpResponseRedirect('/')
+        else:
+            error = 'Invalid username/password'
+            return HttpResponseRedirect('/login/', {'error': error,})
+    else:
+        return render(request, 'qa/login.html')
+
+
+def logout_user(request):
+    logout(request)
+    return HttpResponseRedirect('/')
+
+
 def index(request):
     quests = Question.objects.order_by('-id')
     limit = 10
@@ -20,10 +57,13 @@ def index(request):
     quests = paginator.page(page)
     paginator.baseurl = '/?page='
 
+    user = request.user
+
     return render(request, 'qa/index.html', {
         'quest_list': quests,
         'paginator': paginator,
         'page': page,
+        'user': user,
     })
 
 
@@ -57,6 +97,7 @@ def one_quest(request, id):
 def ask_add(request):
     if request.method == 'POST':
         form = AskForm(request.POST)
+        form._user = request.user
         if form.is_valid():
             ask = form.save()
             url = '/question/{0}'.format(ask.id)

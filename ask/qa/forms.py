@@ -1,6 +1,5 @@
 from .models import Answer, Question, User
 from django import forms
-import random
 
 
 class AskForm(forms.Form):
@@ -11,7 +10,7 @@ class AskForm(forms.Form):
         cleaned_data = super(AskForm, self).clean()
 
     def save(self):
-        self.cleaned_data['author'] = User.objects.create(username='Author{0}'.format(random.randint(1, 1000)))
+        self.cleaned_data['author'] = self._user
         return Question.objects.create(**self.cleaned_data)
 
 
@@ -23,5 +22,5 @@ class AnswerForm(forms.Form):
         cleaned_data = super(AnswerForm, self).clean()
 
     def save(self):
-        self.cleaned_data['author'] = User.objects.create(username='Author{0}'.format(random.randint(1, 1000)))
+        self.cleaned_data['author'] = self._user
         return Answer.objects.create(**self.cleaned_data)

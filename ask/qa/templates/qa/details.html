@@ -1,6 +1,7 @@
 {% csrf_token %}
 
 <h2>{{ quest.title }}</h2>
+<p>Создан пользователем: {{ quest.author.username }}</p>
 
 <p>
     {{ quest.text }}

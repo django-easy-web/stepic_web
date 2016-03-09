@@ -1,3 +1,9 @@
+{% if user.is_authenticated %}
+    <h2>Вы вошли как: {{ user.username }}</h2> <a href="/logout/">Выйти</a>
+{% else %}
+    <h2>Вы вошли как гость</h2> <a href="/login/">Войти</a>
+{% endif %}
+
 <ul>
     {% for p in paginator.page_range %}
         <li><a href="{{ paginator.baseurl }}{{ p }}">{{ p }}</a></li>
